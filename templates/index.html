@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Random Anime</title>
+</head>
+<body>
+  <style>
+    body{
+      background-image: url("../static/img/Frame\ 5.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      color: #FFFFFF;
+    }
+    .showDetails-wrapper{
+      background-color: rgb(32, 44, 44);
+      padding: 5%;
+      max-width: 800px;
+      max-height: 800px;
+      
+    }
+    .showDetails{
+      font-size: 15px;
+    }
+  </style>
+    <h1 class="text-center p-5 bg-dark text-white">Picks A Random Anime To Watch</h1>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-6">
+          <div>
+              <img class="img-fluid" src="{{ animeImage }}" alt="" srcset="">
+          </div>
+        </div>
+        <div class="col-sm-6" id="animeDetails">
+          <div class="showDetails-wrapper">
+            <div class="showDetails">
+              <h3>{{animeTitle}}</h3>
+              <p>Age Rating: {{animeAgeRating}}</p>
+              <p>{{animeSynopsis}}</p>
+              <p>No. of episodes: {{animeEpisodes}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center"><button class="btn" onclick="location.reload()" style="padding: 15px; margin-top: 2%; background-color: orange; font-weight: 800; width: 150px;">Pick an anime</button></div>
+</body>
+</html>
